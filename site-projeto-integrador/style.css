@@ -1,0 +1,402 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #080808;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.cabecalho {
+    background-color: #080808;
+    border-bottom: 1px solid #2b0c0c;
+}
+
+.menu {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 18px 0;
+    text-align: center;
+}
+
+.logo {
+    color: #ff1f1f;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-shadow: 0 0 12px rgba(255, 31, 31, 0.8);
+}
+
+.menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    list-style: none;
+}
+
+.menu a:hover {
+    color: #ff1f1f;
+}
+
+.hero {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.88)),
+        url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1400&q=80") center/cover;
+    display: flex;
+    align-items: center;
+    min-height: 520px;
+    text-align: center;
+}
+
+.hero-conteudo {
+    animation: aparecer 1s ease;
+}
+
+.legenda {
+    color: #ff1f1f;
+    font-weight: bold;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 2.35rem;
+    line-height: 1.1;
+    margin-bottom: 18px;
+}
+
+h2 {
+    font-size: 1.9rem;
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+h3 {
+    margin-bottom: 10px;
+}
+
+p {
+    color: #d8d8d8;
+    line-height: 1.6;
+}
+
+.botao {
+    background-color: #ff1f1f;
+    border-radius: 6px;
+    color: white;
+    display: inline-block;
+    font-weight: bold;
+    margin-top: 24px;
+    padding: 12px 22px;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: white;
+    color: #080808;
+    box-shadow: 0 0 18px rgba(255, 31, 31, 0.9);
+    transform: scale(1.04);
+}
+
+.secao {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.sobre {
+    background-color: #111111;
+}
+
+.duas-colunas {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.evolucao {
+    background: linear-gradient(#080808, #210909);
+}
+
+.texto-intro {
+    max-width: 760px;
+    margin: 0 auto 28px;
+}
+
+.etapas,
+.cards,
+.beneficios-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.etapas article,
+.card,
+.beneficios-lista article {
+    background-color: #151515;
+    border: 1px solid #3a1414;
+    border-radius: 8px;
+    padding: 22px;
+}
+
+.etapas span,
+.beneficios-lista span {
+    align-items: center;
+    background-color: #ff1f1f;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    font-weight: bold;
+    height: 38px;
+    justify-content: center;
+    margin: 0 auto 14px;
+    width: 38px;
+}
+
+.numero {
+    border: 1px solid #ff1f1f;
+    border-radius: 8px;
+    margin-top: 25px;
+    padding: 22px;
+    text-align: center;
+}
+
+.numero strong {
+    color: #ff1f1f;
+    display: block;
+    font-size: 2.5rem;
+    text-shadow: 0 0 12px rgba(255, 31, 31, 0.8);
+}
+
+.treinos {
+    background-color: #080808;
+}
+
+.card {
+    transition: 0.3s;
+}
+
+.card:hover {
+    border-color: #ff1f1f;
+    box-shadow: 0 0 18px rgba(255, 31, 31, 0.35);
+    transform: scale(1.03);
+}
+
+.beneficios {
+    background-color: #111111;
+}
+
+.depoimentos {
+    background: linear-gradient(#111111, #210909);
+}
+
+.depoimento-caixa {
+    background-color: #151515;
+    border: 1px solid #5c1717;
+    border-radius: 8px;
+    margin-top: 25px;
+    overflow: hidden;
+    padding: 24px;
+}
+
+.depoimento-movimento {
+    animation: passarDepoimento 9s infinite;
+    display: flex;
+}
+
+.depoimento-movimento p {
+    color: white;
+    font-size: 1.1rem;
+    min-width: 100%;
+    text-align: center;
+}
+
+.chamada {
+    background-color: #ff1f1f;
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.chamada h2 {
+    color: white;
+}
+
+.chamada .botao {
+    background-color: #080808;
+    color: white;
+}
+
+.rodape {
+    background-color: #050505;
+    border-top: 1px solid #2b0c0c;
+    padding: 30px;
+    text-align: center;
+}
+
+.rodape p {
+    margin-bottom: 6px;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes passarDepoimento {
+    0% {
+        transform: translateX(0);
+    }
+
+    30% {
+        transform: translateX(0);
+    }
+
+    35% {
+        transform: translateX(-100%);
+    }
+
+    65% {
+        transform: translateX(-100%);
+    }
+
+    70% {
+        transform: translateX(-200%);
+    }
+
+    100% {
+        transform: translateX(-200%);
+    }
+}
+
+/* =========================================================
+   MEDIA QUERY 1 - TABLET
+   A partir de 768px, o menu, a secao sobre e alguns cards
+   deixam de ficar em coluna e passam a ficar lado a lado.
+   ========================================================= */
+@media (min-width: 768px) {
+    .menu {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .logo {
+        margin-bottom: 0;
+    }
+
+    .hero {
+        text-align: left;
+    }
+
+    h1 {
+        font-size: 3.7rem;
+        max-width: 720px;
+    }
+
+    h2 {
+        font-size: 2.35rem;
+    }
+
+    .secao {
+        text-align: left;
+    }
+
+    .duas-colunas {
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .duas-colunas > div,
+    .duas-colunas img {
+        width: 50%;
+    }
+
+    .texto-intro {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .etapas,
+    .beneficios-lista {
+        flex-direction: row;
+    }
+
+    .etapas article,
+    .beneficios-lista article {
+        width: 33.33%;
+        text-align: center;
+    }
+
+    .cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: calc(50% - 9px);
+    }
+
+    .chamada,
+    .rodape {
+        text-align: center;
+    }
+}
+
+/* =========================================================
+   MEDIA QUERY 2 - COMPUTADOR
+   A partir de 1000px, os cards dos treinos ficam em 4 colunas
+   para aproveitar melhor a largura da tela.
+   ========================================================= */
+@media (min-width: 1000px) {
+    .hero {
+        min-height: 650px;
+    }
+
+    h1 {
+        font-size: 4.4rem;
+    }
+
+    .card {
+        width: calc(25% - 14px);
+    }
+
+    .secao {
+        padding: 80px 0;
+    }
+}

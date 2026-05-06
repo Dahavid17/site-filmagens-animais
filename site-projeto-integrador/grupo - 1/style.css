@@ -1,0 +1,439 @@
+/* ============================================================
+   OURO E CRINA — Folha de Estilos Principal
+   ============================================================ */
+
+/* -----------------------------------------------------------
+   1. VARIÁVEIS CSS E RESET GLOBAL
+   ----------------------------------------------------------- */
+:root {
+    --primary: #5D4037;   /* Marrom escuro — cor principal de botões e títulos */
+    --secondary: #8D6E63; /* Marrom claro — hover e bordas de destaque */
+    --accent: #2E7D32;    /* Verde natural — cor de acento (disponível para uso futuro) */
+    --light: #F5F5F5;
+    --dark: #212121;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--dark);
+    background-color: var(--white);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+}
+
+span {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: var(--primary);
+}
+
+
+/* -----------------------------------------------------------
+   2. HEADER & NAVEGAÇÃO
+   ----------------------------------------------------------- */
+#header {
+    background: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+#menu a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+#menu a:hover {
+    color: var(--secondary);
+}
+
+
+/* -----------------------------------------------------------
+   3. HERO (BANNER PRINCIPAL)
+   ----------------------------------------------------------- */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                url('https://i1-e.pinimg.com/736x/ce/d4/84/ced484f833f797f3f242d22c6d21c45f.jpg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.btn-cta {
+    display: inline-block;
+    background: var(--primary);
+    color: var(--white);
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-cta:hover {
+    background: var(--secondary);
+    transform: translateY(-3px);
+}
+
+
+/* -----------------------------------------------------------
+   4. CARDS DE RAÇAS
+   ----------------------------------------------------------- */
+
+/*
+   LAYOUT DESKTOP (padrão, sem media query):
+   ➜ 3 colunas lado a lado com grid.
+   Este é o layout base — válido para telas acima de 1024px.
+*/
+.grid-racas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card {
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.info-list {
+    list-style: none;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.info-list li {
+    margin-bottom: 5px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 4px;
+}
+
+
+/* -----------------------------------------------------------
+   5. SEÇÕES DE CUIDADOS E EQUIPAMENTOS
+   ----------------------------------------------------------- */
+.grid-servicos, .grid-equip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.service-item, .equip-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-top: 4px solid var(--secondary);
+}
+
+
+/* -----------------------------------------------------------
+   6. CHECKLIST
+   ----------------------------------------------------------- */
+.bg-alt { background: #f9f9f9; }
+
+.checklist-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.check-group {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    width: 350px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.check-item {
+    display: block;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.check-item input {
+    margin-right: 10px;
+    accent-color: var(--primary);
+}
+
+
+/* -----------------------------------------------------------
+   7. FORMULÁRIO DE CONTATO
+   ----------------------------------------------------------- */
+.form-contato {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-contato input, .form-contato textarea {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline-color: var(--secondary);
+}
+
+
+/* -----------------------------------------------------------
+   8. RODAPÉ
+   ----------------------------------------------------------- */
+footer {
+    text-align: center;
+    padding: 40px 0;
+    background: var(--dark);
+    color: var(--white);
+}
+
+
+/* -----------------------------------------------------------
+   9. MENU MOBILE — ESCONDIDO POR PADRÃO NO DESKTOP
+   ----------------------------------------------------------- */
+
+/*
+   O botão hambúrguer é ocultado no desktop com display:none.
+   Ele só aparece quando a media query de 768px é ativada.
+*/
+#btn-mobile { display: none; }
+
+
+/* ===========================================================
+   ██████████████████████████████████████████████████████████
+   10. MEDIA QUERIES — O CORAÇÃO DA RESPONSIVIDADE DO SITE
+   ██████████████████████████████████████████████████████████
+
+   Media Queries são a técnica principal deste site para
+   adaptar o layout a diferentes tamanhos de tela.
+
+   Como funcionam:
+   - O CSS fora das media queries define o estilo BASE (desktop).
+   - As media queries sobrescrevem estilos específicos quando
+     a largura da janela atinge o valor definido em "max-width".
+   - O navegador lê de cima para baixo: a última regra que
+     "encaixa" na tela vence.
+
+   Breakpoints usados neste projeto:
+   ┌─────────────────┬──────────────────────────────────────┐
+   │ max-width: 1024px │ Tablets e laptops menores          │
+   │ max-width: 768px  │ Celulares e telas pequenas         │
+   └─────────────────┴──────────────────────────────────────┘
+   =========================================================== */
+
+
+/* -----------------------------------------------------------
+   BREAKPOINT 1 — TABLETS (max-width: 1024px)
+
+   Ativado quando a tela tem ATÉ 1024 pixels de largura.
+   Ajuste principal: os cards de raças passam de 3 colunas
+   para 2 colunas, evitando que fiquem estreitos demais.
+   ----------------------------------------------------------- */
+@media (max-width: 1024px) {
+
+    /*
+       GRID DE RAÇAS: 3 colunas → 2 colunas
+       Em tablets, 3 cards por linha ficaria espremido.
+       Com 2 colunas o layout respira melhor.
+    */
+    .grid-racas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* -----------------------------------------------------------
+   BREAKPOINT 2 — CELULARES (max-width: 768px)
+
+   Ativado quando a tela tem ATÉ 768 pixels de largura.
+   É o breakpoint mais importante do site: aqui o layout
+   muda completamente para se adaptar a telas pequenas.
+   ----------------------------------------------------------- */
+@media (max-width: 768px) {
+
+    /*
+       MENU DE NAVEGAÇÃO:
+       No celular, o menu horizontal não cabe na tela.
+       Por isso ele é transformado em um menu vertical
+       que fica escondido (height: 0, visibility: hidden)
+       e só aparece quando o usuário clica no hambúrguer.
+    */
+    #menu {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 70px;
+        right: 0;
+        background: var(--white);
+        height: 0;
+        transition: 0.6s;
+        z-index: 1000;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    #hamburger {
+        border-top: 2px solid;
+        width: 20px;
+    }
+
+    #hamburger::after, #hamburger::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: 0.3s;
+        position: relative;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .grid-racas {
+        grid-template-columns: 1fr;
+    }
+    /*
+       MENU ABERTO:
+       Quando o JS adiciona a classe .active ao #nav,
+       o menu ganha altura real e fica visível.
+       O height usa calc() para ocupar o restante da tela
+       abaixo do header (100vh - 70px).
+    */
+    #nav.active #menu {
+        
+    }
+
+    /* Cada item do menu ganha espaçamento e separador visual */
+    #menu li {
+        
+    }
+
+    /*
+       BOTÃO HAMBÚRGUER:
+       Só aparece no celular (no desktop está com display:none).
+       Usa flexbox para alinhar o ícone com o texto se necessário.
+    */
+    #btn-mobile {
+        
+    }
+
+    /*
+       ÍCONE HAMBÚRGUER (três listras):
+       Criado com CSS puro usando border-top + ::before e ::after.
+       Nenhuma imagem ou ícone externo é necessário.
+    */
+    #hamburger {
+        
+    }
+
+    #hamburger::after, #hamburger::before {
+        
+    }
+
+    /*
+       TÍTULO DO HERO:
+       3.5rem é grande demais para celular — reduzimos para 2.2rem
+       para que o título caiba sem quebrar estranhamente.
+    */
+    .hero-content h1 {
+        
+    }
+
+    /*
+       GRID DE RAÇAS: 2 colunas → 1 coluna
+       Em telas pequenas, 2 cards por linha ainda ficaria apertado.
+       Uma única coluna garante leitura confortável no celular.
+    */
+    .grid-racas {
+        
+    }
+
+}
+
+/* ===========================================================
+   FIM DAS MEDIA QUERIES
+   =========================================================== */

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ouro e Crina | Mundo Equestre</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header id="header">
+        <div class="container nav-container">
+            <div class="logo">
+             <img
+    src="cavalo2/cavalo.png" 
+    alt="Logo Ouro e Crina" 
+    style="
+        width: 80px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 2px solid #c9a44c;
+        padding: 3px;
+        background-color: #fff;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        transition: transform 0.3s ease;
+    "
+    onmouseover="this.style.transform='scale(1.1)'"
+    onmouseout="this.style.transform='scale(1)'"
+>
+            </div>
+            <nav id="nav">
+                <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+                    <span id="hamburger"></span>
+                </button>
+                <ul id="menu" role="menu">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#racas">Raças</a></li>
+                    <li><a href="#cuidados">Cuidados</a></li>
+                    <li><a href="#equipamentos">Equipamentos</a></li>
+                    <li><a href="#checklist">Checklist</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Tudo sobre o mundo dos cavalos</h1>
+            <p>Conectando entusiastas à nobreza e força dos equinos.</p>
+            <a href="#racas" class="btn-cta">Saiba mais</a>
+        </div>
+    </section>
+
+    <section id="racas" class="container section">
+        <h2 class="section-title">Raças de Destaque</h2>
+        <div class="grid-racas">
+
+            <div class="card" data-anime="left">
+                <img src="https://i1-e.pinimg.com/1200x/19/be/db/19bedbdfd55906b605126553d79a8a71.jpg" alt="Cavalo Árabe">
+                <div class="card-content">
+                    <h3>Puro Sangue Árabe</h3>
+                    <p>Considerado uma das raças mais antigas do mundo, o Árabe possui uma inteligência aguçada e uma resistência lendária que o tornam o rei das provas de enduro. Sua cabeça côncava característica, olhos grandes e expressivos e narinas dilatadas são marcas registradas. Com mais de 4.500 anos de história, foi o Árabe que deu base genética para boa parte das raças modernas.</p>
+                    <ul class="info-list">
+                        <li><strong>Origem:</strong> Península Arábica</li>
+                        <li><strong>Uso:</strong> Enduro e Lazer</li>
+                        <li><strong>Energia:</strong> Alta</li>
+                        <li><strong>Porte:</strong> 142–158 cm de altura</li>
+                        <li><strong>Característica única:</strong> Possui 1 vértebra lombar a menos que outras raças</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card" data-anime="bottom">
+                <img src="https://i1-e.pinimg.com/1200x/13/5f/da/135fda8c9046c5cc30a91db26f75d154.jpg" alt="Quarto de Milha">
+                <div class="card-content">
+                    <h3>Quarto de Milha</h3>
+                    <p>O atleta completo do mundo equestre. O Quarto de Milha é a raça mais registrada do planeta, e não é por acaso: sua musculatura explosiva o torna o animal mais veloz do mundo em distâncias curtas, atingindo até 88 km/h. É igualmente excelente no campo, no rodeio e na pista. Dócil, inteligente e extremamente versátil, é o preferido de peões e atletas.</p>
+                    <ul class="info-list">
+                        <li><strong>Origem:</strong> EUA</li>
+                        <li><strong>Uso:</strong> Trabalho e Corrida</li>
+                        <li><strong>Energia:</strong> Média/Alta</li>
+                        <li><strong>Porte:</strong> 147–163 cm de altura</li>
+                        <li><strong>Característica única:</strong> O mais rápido do mundo em até 400 metros</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card" data-anime="right">
+                <img src="https://i1-e.pinimg.com/1200x/03/56/21/035621443b68262d0627f9cda02868e7.jpg" alt="Frísio">
+                <div class="card-content">
+                    <h3>Frísio</h3>
+                    <p>Nascido nas planícies da Holanda, o Frísio é frequentemente chamado de "o cavalo mais bonito do mundo". Sua pelagem preta como carvão, crina e cauda abundantes e movimentos altivos e dramáticos causam impacto imediato. Apesar da aparência imponente, possui um temperamento surpreendentemente dócil e afetivo. É a escolha favorita para adestramento de alta escola e desfiles históricos.</p>
+                    <ul class="info-list">
+                        <li><strong>Origem:</strong> Holanda (Frísia)</li>
+                        <li><strong>Uso:</strong> Adestramento / Exibição</li>
+                        <li><strong>Energia:</strong> Média</li>
+                        <li><strong>Porte:</strong> 157–165 cm de altura</li>
+                        <li><strong>Característica única:</strong> Quase sempre exclusivamente preto, sem marcações</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card" data-anime="left">
+                <img src="https://idrqpuhswiecodarvmea.supabase.co/storage/v1/object/public/blogsell/posts/1083e82f-3ae6-404e-82be-7fe10d9cfc20/1776767285180-26yv1n.webp" alt="Mustangue">
+                <div class="card-content">
+                    <h3>Mustangue</h3>
+                    <p>O Mustangue é o símbolo vivo da liberdade americana. Descendente dos cavalos trazidos pelos espanhóis no século XVI, esses animais voltaram ao estado selvagem e desenvolveram uma resistência excepcional ao longo de séculos de sobrevivência nos terrenos áridos do Oeste americano. Domar um Mustangue exige paciência e respeito — quem conquista sua confiança ganha um companheiro para a vida toda.</p>
+                    <ul class="info-list">
+                        <li><strong>Origem:</strong> América do Norte</li>
+                        <li><strong>Uso:</strong> Resistência e Lazer</li>
+                        <li><strong>Energia:</strong> Muito Alta</li>
+                        <li><strong>Porte:</strong> 142–155 cm de altura</li>
+                        <li><strong>Característica única:</strong> Raça semi-selvagem protegida por lei nos EUA</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card" data-anime="bottom">
+                <img src="https://i1-e.pinimg.com/1200x/c6/7e/97/c67e971c8a97a983590380a0eaf7809c.jpg" alt="Appaloosa">
+                <div class="card-content">
+                    <h3>Appaloosa</h3>
+                    <p>Inconfundível por sua pelagem pintada com pintas e manchas únicas — nenhum Appaloosa é igual ao outro. Desenvolvido pela nação Nez Percé no noroeste dos EUA, esse cavalo combina agilidade, força e resistência. Além da pelagem marcante, possui esclera branca visível ao redor dos olhos (parecida com a humana), cascos listrados e pele malhada, traços exclusivos da raça.</p>
+                    <ul class="info-list">
+                        <li><strong>Origem:</strong> EUA (tribo Nez Percé)</li>
+                        <li><strong>Uso:</strong> Hipismo e Rodeio</li>
+                        <li><strong>Energia:</strong> Alta</li>
+                        <li><strong>Porte:</strong> 142–162 cm de altura</li>
+                        <li><strong>Característica única:</strong> Nenhum animal tem a mesma pelagem manchada</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card" data-anime="right">
+                <img src="https://i1-e.pinimg.com/1200x/71/c1/81/71c1817edd95de22db581e0faee3d350.jpg" alt="Percheron">
+                <div class="card-content">
+                    <h3>Percheron</h3>
+                    <p>é uma raça de cavalo francesa originária da atual comuna de Perche, de onde herdou o nome. Trata-se de uma típica raça de cavalo de tração, e a mais conhecida das raças equinas francesas. Conhecido como o "gigante gentil", este equino combina uma força física extraordinária com uma elegância rara para animais do seu porte, sendo capaz de ultrapassar 1 tonelada de peso.</p>
+                    <ul class="info-list">
+                        <li><strong>Origem:</strong> Portugal</li>
+                        <li><strong>Uso:</strong> Alta Escola / Adestramento Olímpico</li>
+                        <li><strong>Energia:</strong> Média</li>
+                        <li><strong>Porte:</strong> 155–165 cm de altura</li>
+                        <li><strong>Característica única:</strong> Descendente direto dos cavalos ibéricos da Antiguidade</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="cuidados" class="bg-alt section">
+        <div class="container">
+            <h2 class="section-title">Cuidados Essenciais</h2>
+            <div class="grid-servicos">
+                <div class="service-item">
+                    <h3>Alimentação</h3>
+                    <p>Baseada em volumoso (feno/pasto) e suplementação controlada.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Higiene</h3>
+                    <p>Escovação diária e limpeza dos cascos para evitar doenças.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Saúde</h3>
+                    <p>Vacinação em dia e visitas regulares do veterinário e ferrador.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="equipamentos" class="container section">
+        <h2 class="section-title">Equipamentos Básicos</h2>
+        <div class="grid-equip">
+            <div class="equip-card">
+                <h4>Sela Inglesa</h4>
+                <p>Ideal para salto e adestramento clássico.</p>
+            </div>
+            <div class="equip-card">
+                <h4>Cabresto</h4>
+                <p>Essencial para condução e manejo diário.</p>
+            </div>
+            <div class="equip-card">
+                <h4>Manta</h4>
+                <p>Protege o dorso do cavalo contra o atrito da sela.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="checklist" class="bg-alt section">
+        <div class="container">
+            <h2 class="section-title">Checklist do Proprietário</h2>
+            <div class="checklist-container">
+                <div class="check-group">
+                    <h3>Rotina Diária</h3>
+                    <label class="check-item"><input type="checkbox"> Água limpa disponível</label>
+                    <label class="check-item"><input type="checkbox"> Verificação de ferimentos</label>
+                    <label class="check-item"><input type="checkbox"> Limpeza da baia</label>
+                </div>
+                <div class="check-group">
+                    <h3>Equipamentos</h3>
+                    <label class="check-item"><input type="checkbox"> Kit de escovação</label>
+                    <label class="check-item"><input type="checkbox"> Ferraduras em bom estado</label>
+                    <label class="check-item"><input type="checkbox"> Embocadura limpa</label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="container section">
+        <h2 class="section-title">Fale Conosco</h2>
+        <form class="form-contato">
+            <input type="text" placeholder="Seu Nome" required>
+            <input type="email" placeholder="Seu E-mail" required>
+            <textarea placeholder="Sua Mensagem" rows="5" required></textarea>
+            <button type="submit" class="btn-cta">Enviar Mensagem</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Ouro e Crina - Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
